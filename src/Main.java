@@ -43,11 +43,7 @@ public class Main {
         Exercise 11: (5) Add an @TestNote annotation to @Unit, so that the accompanying
         note is simply displayed during testing.
 
-
-
-
-
-        I'm add by I can not test....  I can not understand what file this task need
+        I redid it a bit and connected the file directly, because the ClassNameFinder class does not want to work for me
          */
 
 

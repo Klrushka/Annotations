@@ -7,10 +7,7 @@ import java.util.List;
 
 public class TableCreator {
     public static void start(String[] args) throws Exception {
-        if (args.length < 1) {
-            System.out.println("arguments: annotated classes");
-            //System.exit(0);
-        }
+
         for (String className : args) {
             Class<?> cl = Class.forName(className);
             DBTable dbTable = cl.getAnnotation(DBTable.class);
