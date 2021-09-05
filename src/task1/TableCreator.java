@@ -1,5 +1,7 @@
 package task1;
 
+import task1.annotations.*;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;

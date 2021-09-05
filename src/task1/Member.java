@@ -1,5 +1,7 @@
 package task1;
 
+import task1.annotations.*;
+
 @DBTable(name = "MEMBER")
 public class Member {
     @SQLString(30)

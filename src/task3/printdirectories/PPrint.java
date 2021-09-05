@@ -1,4 +1,4 @@
-package task3;
+package task3.printdirectories;
 
 import java.util.Arrays;
 import java.util.Collection;

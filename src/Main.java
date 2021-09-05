@@ -5,52 +5,72 @@ import task3.AtUnit;
 public class Main {
     public static void main(String[] args) {
 
-        /*
-        Exercise 1: (2) Implement more SQL types in the database example
+            /*
+            Exercise 1: (2) Implement more SQL types in the database example
 
-        added SQLDate
-         */
-
-        try {
-            TableCreator.start(args);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            added SQLDate
+             */
 
 
-        System.out.println();
+            try {
+                TableCreator.start(args);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
 
 
-        /*
-        Exercise 2: (3) Add support for division to the interface extractor.
-         */
 
-        try {
-            System.out.println(Division.div(5,6));
-            System.out.println(Division.div(3,1));
-            System.out.println(Division.div(6,3));
-            System.out.println(Division.div(7,8));
-            System.out.println(Division.div(1,5));
-            System.out.println(Division.div(8,4));
+            /*
+            Exercise 2: (3) Add support for division to the interface extractor.
+             */
 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        System.out.println("task 2");
 
+        printLine();
 
-        /*
-        Exercise 11: (5) Add an @TestNote annotation to @Unit, so that the accompanying
-        note is simply displayed during testing.
+            try {
+                System.out.println(Division.div(5,6));
+                System.out.println(Division.div(3,1));
+                System.out.println(Division.div(6,3));
+                System.out.println(Division.div(7,8));
+                System.out.println(Division.div(1,5));
+                System.out.println(Division.div(8,4));
 
-        I redid it a bit and connected the file directly, because the ClassNameFinder class does not want to work for me
-         */
+            } catch (Exception e){
+                e.printStackTrace();
+            }
 
 
-        try {
-            AtUnit.start(args);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            printLine();
+
+            /*
+            Exercise 11: (5) Add an @TestNote annotation to @Unit, so that the accompanying
+            note is simply displayed during testing.
+
+            I redid it a bit and connected the file directly, because the ClassNameFinder class does not want to work for me
+             */
+
+
+        System.out.println("task 5");
+
+        printLine();
+
+
+
+            try {
+                AtUnit.start(args);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            printLine();
+
+    }
+
+
+
+    public static void printLine(){
+        System.out.println("\n------------------------------------------------------------------------\n");
     }
 }

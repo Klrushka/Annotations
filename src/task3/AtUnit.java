@@ -1,14 +1,21 @@
 package task3;
 
+import task3.annotattions.Test;
+import task3.annotattions.TestNote;
+import task3.annotattions.TestObjectCleanup;
+import task3.annotattions.TestObjectCreate;
+
 import java.io.File;
+import java.io.FileReader;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
-import static task3.Print.print;
-import static task3.Print.printnb;
+import static task3.printdirectories.Print.print;
+import static task3.printdirectories.Print.printnb;
 
 
 public class AtUnit implements ProcessFiles.Strategy{
@@ -32,7 +39,11 @@ public class AtUnit implements ProcessFiles.Strategy{
     }
     public void process(File cFile) {
         try {
-            String cName = "task3.AtUnitExampleNote";
+            String cName;
+            Properties properties = new Properties();
+            properties.load(new FileReader("src\\config.properties"));
+             cName = properties.getProperty("path");
+
             if(!cName.contains("."))
                 return; // Ignore unpackaged classes
             testClass = Class.forName(cName);

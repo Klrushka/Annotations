@@ -1,4 +1,4 @@
-package task3;
+package task3.annotattions;
 
 import java.lang.annotation.*;
 
